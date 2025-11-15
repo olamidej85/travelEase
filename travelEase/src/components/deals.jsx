@@ -6,7 +6,7 @@ function Deals() {
     <section className="deals">
       <h2>Seasonal Deals</h2>
       <div className="grid">
-        <div className="deal-card">
+        <div className="deal-card" data-aos="zoom-in" data-aos-delay="50">
           <div
             className="deal-img"
             style={{ backgroundImage: `url("images/zanzi-couple.webp")` }}
@@ -17,7 +17,7 @@ function Deals() {
           </div>
         </div>
 
-        <div className="deal-card">
+        <div className="deal-card" data-aos="zoom-in" data-aos-delay="50">
           <div
             className="deal-img"
             style={{ backgroundImage: `url("images/family-kenya.webp")` }}
@@ -28,7 +28,7 @@ function Deals() {
           </div>
         </div>
 
-        <div className="deal-card">
+        <div className="deal-card" data-aos="zoom-in" data-aos-delay="50">
           <div
             className="deal-img"
             style={{ backgroundImage: `url("images/zanzi-friends.jpg")` }}

@@ -8,8 +8,7 @@ function BookingSuccess() {
       <p>Your trip is all set. You will receive an email with your itinerary.</p>
       <p>If you have any questions, contact our support team.</p>
 
-      <img src="images/dbail.jpg" alt="Booked Package" className="img-fluid mt-3 mb-4 rounded" style={{ maxWidth: "400px" }} />
-
+  
       <div className="booking-card p-3 shadow">
         <h4>Package Summary</h4>
         <p><strong>Destination:</strong> Dubai</p>

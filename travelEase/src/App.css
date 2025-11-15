@@ -81,36 +81,97 @@ body {
 
 
 .hero {
+  position: relative;
   height: 90vh;
-   background: url("images/background.webp") center/cover no-repeat;
-  color: #111;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  color: #fff;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 1rem;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); 
 }
 
 .hero-content p {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 2rem;
-  color: #080707;
+  color: #f8f8f8;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
-.check-btn{
-  padding: 10px 80px;
+
+.check-btn {
+  padding: 12px 60px;
+  background-color: #fff;
+  color: #111;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.check-btn:hover {
   background-color: #111;
   color: #fff;
-  border: none;
-  border-radius: 20px;
-  font-size: 20px;
-  font-weight: 600;
+  transform: scale(1.05);
 }
+.sound-toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  background-color:none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.sound-toggle:hover {
+  background-color:none;
+  transform: scale(1.1);
+}
+
 
 .destinations {
   padding: 4rem 0;
@@ -966,6 +1027,7 @@ img.img-fluid {
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
+
 .booking-card {
   margin-top: 20px;
   border-radius: 8px;
@@ -978,25 +1040,239 @@ img.img-fluid {
 .booking-card strong {
   color: #333;
 }
-@media (max-width: 768px) {
-  .dubai-hero {
-    height: 220px;
+.contact-container {
+  padding: 60px 10%;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.contact-info h3 {
+  margin-top: 25px;
+  color: #555;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: #007bff;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #0056b3;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.send-btn {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 60vh;
+    padding: 1rem;
   }
-  .dubai-hero-caption h1 {
-    font-size: 1.4rem;
+
+  .hero-content h1 {
+    font-size: 1.8rem;
   }
-  .dubai-package {
-    flex-direction: column;
+
+  .hero-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
-  .dubai-package img {
-    width: 100%;
+
+  .check-btn {
+    padding: 10px 35px;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+  .destinations h2 {
+    font-size: 2rem;
+  }
+.card {
+    margin: 0 10px;  
+  }
+  .card-img {
     height: 180px;
   }
+   .deals {
+    padding: 40px 5%;
+  }
+
+  .deals h2 {
+    font-size: 1.7rem;
+  }
+  .deal-img {
+    height: 180px; 
+  }
+  .deal-body h3 {
+    font-size: 1.2rem;
+  }
+  .deal-body p {
+    font-size: 0.95rem;
+  }
+  .dubai-hero {
+    height: 240px;
+  }
+  .dubai-hero-caption h1 {
+    font-size: 1.5rem;
+  }
+  .dubai-tabs {
+    gap: 14px;
+    font-size: 0.9rem;
+  }
+  .dubai-card-media img {
+    height: 160px;
+  }
+  .dubai-content {
+    padding: 0 10px;
+  }
+   .packages-title {
+    font-size: 1.6rem;
+  }
+
+  .packages-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .package-image {
+    height: 170px;
+  }
+  .package-title {
+    font-size: 1.1rem;
+  }
+  .package-description,
+  .package-content ul,
+  .package-duration {
+    font-size: 0.9rem;
+  }
+  .package-btn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }  
    .login-box {
     padding: 18px;
   }
-
   .login-box h2 {
     font-size: 20px;
+  }
+  .contact-container {
+    padding: 40px 6%;
+  }
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+  .contact-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+  .footer {
+    padding: 25px 15px;
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
   }
 }

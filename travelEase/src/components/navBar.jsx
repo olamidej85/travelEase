@@ -35,7 +35,7 @@ function NavBar() {
               <Link className="nav-link" to="/bookFlight">Flights</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className="nav-link" to="/contactPage">Contact</Link>
             </li>
           </ul>
 
