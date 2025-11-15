@@ -47,6 +47,7 @@ function Hero() {
         loop
         playsInline
         muted
+         preload="auto"
       >
         <source src="/videos/dubaicity2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
