@@ -5,7 +5,6 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f9f9f9;
   color: #333;
   line-height: 1.6;
@@ -29,14 +28,6 @@ body {
   align-items: center;
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -49,34 +40,10 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #0077ff;
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 .search {
   padding: 0.4rem 0.6rem;
   border: 1px solid #ddd;
   border-radius: 6px;
-}
-
-.lang-btn {
-  background: transparent;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.avatar {
-  width: 35px;
-  height: 35px;
-  background: #ccc;
-  border-radius: 50%;
 }
 
 
@@ -87,7 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 20px;
   color: #fff;
   overflow: hidden;
 }
@@ -114,7 +81,7 @@ body {
   position: relative;
   z-index: 2;
   max-width: 800px;
-  padding: 1rem;
+  padding: 18px;
 }
 
 .hero-content h1 {
@@ -125,9 +92,9 @@ body {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   color: #f8f8f8;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
@@ -149,29 +116,6 @@ body {
   color: #fff;
   transform: scale(1.05);
 }
-.sound-toggle {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: none;
-  background-color:none;
-  border: none;
-  width: 20px;
-  height: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-}
-
-.sound-toggle:hover {
-  background-color:none;
-  transform: scale(1.1);
-}
-
 
 .destinations {
   padding: 4rem 0;
@@ -210,27 +154,23 @@ body {
 }
 
 .card h3 {
-  margin: 1rem 0 0.5rem;
+  margin: 16px 0 10px;
 }
 
 .card p {
-  padding: 0 1rem 1rem;
+  padding: 0 16px 16px;
   color: #555;
 }
 
-.tropical { background-image: url("https://picsum.photos/400/250?random=1"); }
-.winter { background-image: url("https://picsum.photos/400/250?random=2"); }
-.city { background-image: url("https://picsum.photos/400/250?random=3"); }
-
 .deals {
-  padding: 4rem 0;
+  padding: 50px 0;
   background: #f0f8ff;
 }
 
 .deals h2 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 30px;
+  margin-bottom: 36px;
 }
 
 .deal-card {
@@ -253,30 +193,26 @@ body {
 }
 
 .deal-card h3 {
-  margin: 1rem 0 0.5rem;
+  margin: 16px 0 10px;
 }
 
 .deal-card p {
-  padding: 0 1rem 1rem;
+  padding: 0 16px 16px;
   color: #555;
 }
-
-.summer { background-image: url("https://picsum.photos/400/250?random=4"); }
-.autumn { background-image: url("https://picsum.photos/400/250?random=5"); }
-.spring { background-image: url("https://picsum.photos/400/250?random=6"); }
 
 .footer {
   background: #222;
   color: #ccc;
-  padding: 2rem 0;
+  padding: 30px 0;
   text-align: center;
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  gap: 25px;
+  margin-bottom: 20px;
 }
 
 .footer-links a {
@@ -290,7 +226,7 @@ body {
 }
 
 .footer p {
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
 
@@ -300,7 +236,7 @@ body {
 }
 
 .deals2-title {
-  font-size: 2rem;
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
@@ -368,12 +304,12 @@ body {
 }
 
 .packages-title {
-  font-size: 2rem;
+  font-size: 30px;
   margin-bottom: 5px;
 }
 
 .packages-subtitle {
-  font-size: 1rem;
+  font-size: 16px;
   color: #666;
   margin-bottom: 30px;
 }
@@ -405,22 +341,22 @@ body {
 }
 
 .package-duration {
-  font-size: 0.9rem;
+  font-size: 20px;
   color: #777;
 }
 
 .package-title {
-  font-size: 1.2rem;
+  font-size: 20px;
   margin: 10px 0;
 }
 
 .package-description {
-  font-size: 0.95rem;
+  font-size: 16px;
   color: #444;
 }
 
 .package-price {
-  font-size: 1rem;
+  font-size: 10px;
   font-weight: bold;
   margin: 10px 0;
 }
@@ -431,7 +367,7 @@ body {
 
 .package-content ul {
   margin: 0 0 10px 20px;
-  font-size: 0.9rem;
+  font-size: 16px;
   color: #555;
 }
 
